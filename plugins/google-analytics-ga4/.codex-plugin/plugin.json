@@ -1,0 +1,40 @@
+{
+  "name": "google-analytics-ga4",
+  "version": "0.1.0",
+  "description": "Track Google Analytics 4 events from Codex through a local MCP server.",
+  "author": {
+    "name": "_lenlook",
+    "email": "Daonhu96@gmail.com",
+    "url": "https://github.com/DaoNhu96"
+  },
+  "homepage": "https://analytics.google.com/",
+  "repository": "https://github.com/DaoNhu96/pixel-pulse-lab",
+  "license": "MIT",
+  "keywords": [
+    "google-analytics",
+    "ga4",
+    "mcp",
+    "analytics"
+  ],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Google Analytics GA4",
+    "shortDescription": "Send GA4 events from Codex",
+    "longDescription": "A local MCP bridge that lets Codex send Google Analytics 4 Measurement Protocol events for testing and lightweight automation flows.",
+    "developerName": "_lenlook",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://analytics.google.com/",
+    "privacyPolicyURL": "https://policies.google.com/privacy",
+    "termsOfServiceURL": "https://policies.google.com/terms",
+    "defaultPrompt": [
+      "Send a GA4 test event for my landing page CTA",
+      "Track a signup event with custom parameters",
+      "Validate my GA4 Measurement Protocol setup"
+    ],
+    "brandColor": "#E8710A"
+  }
+}
