@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GA4 Test Site</title>
+    <meta
+      name="description"
+      content="A minimal GitHub Pages site for learning Google Analytics 4 event tracking."
+    >
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Replace G-XXXXXXXXXX with your GA4 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">GitHub Pages + Google Analytics 4</p>
+        <h1>Track a simple website first.</h1>
+        <p class="lead">
+          This page is intentionally small. It gives you three beginner analytics events:
+          page view, CTA click, and form submit.
+        </p>
+        <div class="actions">
+          <button id="cta-button" class="button button-primary" type="button">
+            Start Tracking
+          </button>
+          <a
+            class="button button-secondary"
+            href="https://analytics.google.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open GA4
+          </a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>What this demo tracks</h2>
+        <ul>
+          <li><code>page_view</code> from the default GA4 tag</li>
+          <li><code>cta_click</code> when the main button is pressed</li>
+          <li><code>form_submit</code> when the test form is submitted</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Test form</h2>
+        <form id="email-form" class="form">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+          <label for="goal">Why are you testing GA4?</label>
+          <select id="goal" name="goal">
+            <option value="learn_reports">Learn reports</option>
+            <option value="test_events">Test events</option>
+            <option value="ship_landing_page">Ship a landing page</option>
+          </select>
+
+          <button class="button button-primary" type="submit">Submit Test Event</button>
+          <p id="form-status" class="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
