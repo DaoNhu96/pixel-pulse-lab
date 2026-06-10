@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "google-analytics-ga4": {
+      "cwd": ".",
+      "command": "node",
+      "args": [
+        "./mcp/server.mjs"
+      ],
+      "env": {
+        "GA4_MEASUREMENT_ID": "${GA4_MEASUREMENT_ID}",
+        "GA4_API_SECRET": "${GA4_API_SECRET}",
+        "GA4_CLIENT_ID": "${GA4_CLIENT_ID}"
+      }
+    }
+  }
+}
